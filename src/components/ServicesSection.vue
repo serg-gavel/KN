@@ -42,10 +42,12 @@
         </table>
       </div>
     </div>
+    <ButtonBox>ButtonBox</ButtonBox>
   </section>
 </template>
 
 <script>
+import ButtonBox from './ButtonBox'
 export default {
   name: 'ServicesSection',
   data () {
@@ -54,7 +56,8 @@ export default {
       ServicesDescription: 'Уже в течение нескольких лет я помогаю своим клиентам становиться увереннее и выражать свой красивый внутренний мир за счет внешнего. Мои услуги включают в себя разбор гардероба, подбор стиля и персональный шоппинг с клиентом. Выбрать можно как полный пакет, так и каждую услугу отдельно в зависимости от вашего желания.',
       ServiceType: 'Маникюр'
     }
-  }
+  },
+  components: { ButtonBox }
 }
 </script>
 
@@ -85,7 +88,7 @@ export default {
           margin: 0 auto;
           font-family: arial, sans-serif;
           border-collapse: collapse;
-          width: 60%;
+          width: 65%;
           margin-bottom: 30px;
           z-index: 3;
         }
