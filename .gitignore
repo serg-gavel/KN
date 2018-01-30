@@ -7,7 +7,13 @@ yarn-error.log*
 /test/unit/coverage/
 /test/e2e/reports/
 selenium-debug.log
-/src/components
+/src/components/AppHeader.vue
+/src/components/AppMain.vue
+/src/components/AppFooter.vue
+/src/components/CoverImage.vue
+/src/components/Social.vue
+/src/components/NavList.vue
+/src/components/NavListFooter.vue
 /src/assets
 # Editor directories and files
 .idea
