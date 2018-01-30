@@ -10,18 +10,22 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, cum?
         </p>
       </div>
+      <ButtonBox>ButtonBox</ButtonBox>
     </div>
   </section>
 </template>
 
 <script>
+import ButtonBox from './ButtonBox'
+
 export default {
   name: 'CooperationSection',
   data () {
     return {
       msg: 'Cooperation Section!'
     }
-  }
+  },
+  components: { ButtonBox }
 }
 </script>
 
