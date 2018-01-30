@@ -64,6 +64,12 @@ export default {
     order: 2;
     height: 100%;
     background: rgba(9, 0, 255, 0.68);
+    h3{
+      padding-top: 20px;
+    }
+    p.services-description{
+      padding: 0 12%;
+    }
     .services-image{
       img{
         max-width: 200px;
