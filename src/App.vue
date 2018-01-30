@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="container">
-      <AppHeader>App Header</AppHeader>
-      <AppMain>App Main</AppMain>
+      <AppHeader>Header</AppHeader>
+      <AppMain>Main</AppMain>
     </div>
-    <AppFooter>App Footer</AppFooter>
+    <AppFooter>Footer</AppFooter>
   </div>
 </template>
 
