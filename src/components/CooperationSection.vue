@@ -4,7 +4,7 @@
       <img src="../../src/assets/img/cooperation.jpg" alt="cooperation-image">
     </div>
     <div class="cooperation-description">
-      <h3 class="cooperation-heading">{{ CooperationHeader }}</h3>
+      <h3 class="cooperation-heading">{{ CooperationHeading }}</h3>
       <div class="description-text">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, cum?
@@ -27,7 +27,7 @@ export default {
   name: 'CooperationSection',
   data () {
     return {
-      CooperationHeader: 'Сотрудничество'
+      CooperationHeading: 'Сотрудничество'
     }
   },
   components: { ButtonBox }
