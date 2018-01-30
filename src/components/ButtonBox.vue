@@ -14,6 +14,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/main";
   .button-box{
+    width: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
     background: #fff;
