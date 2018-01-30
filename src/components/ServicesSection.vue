@@ -10,7 +10,7 @@
     <div class="services-price">
       <div class="price-list">
         <h4 class="services-type">{{ ServiceType }}</h4>
-        <table>
+        <table class="price-table">
           <tr>
             <th>Услуга</th>
             <th>Цена</th>
@@ -66,7 +66,6 @@ export default {
   .services-section{
     order: 2;
     height: 100%;
-    /*background: rgba(9, 0, 255, 0.68);*/
     h3{
       padding-top: 20px;
     }
@@ -84,7 +83,7 @@ export default {
         h4.services-type{
           padding: 20px 0;
         }
-        table {
+        table.price-table{
           margin: 0 auto;
           font-family: arial, sans-serif;
           border-collapse: collapse;
@@ -111,4 +110,25 @@ export default {
       }
     }
   }
+@media (max-width: 1200px) {
+}
+@media (max-width: 998px) {
+}
+@media (max-width: 770px) {
+  .services-price{
+    .price-list {
+      table.price-table{
+        width: 85% !important;
+      }
+    }
+  }
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 430px) {
+}
+@media (max-width: 330px) {
+}
 </style>
