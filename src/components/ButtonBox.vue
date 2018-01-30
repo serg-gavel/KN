@@ -57,6 +57,7 @@ export default {
   .btn {
     margin: 5px 5px;
     padding: 10px 20px;
+    transition: all .7s linear;
   }
 }
 @media (max-width: 430px) {
