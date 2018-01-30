@@ -35,18 +35,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/main";
   .cooperation-section{
-    padding-top: 20px;
+    padding: 20px 0;
     order: 2;
     height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: rgba(37, 130, 59, 0.68);
     .cooperation-image{
-      flex-basis: 50%;
+      flex-basis: 48%;
+      padding-left: 2%;
       img{
         width: 100%;
+        @include shadow;
       }
     }
     .cooperation-description{
