@@ -15,8 +15,8 @@
           temporibus voluptas voluptate.
         </p>
       </div>
-      <ButtonBox>ButtonBox</ButtonBox>
     </div>
+    <ButtonBox>ButtonBox</ButtonBox>
   </section>
 </template>
 
@@ -64,4 +64,25 @@ export default {
       }
     }
   }
+/*media*/
+@media (max-width: 1200px) {
+}
+@media (max-width: 998px) {
+}
+@media (max-width: 770px) {
+  .cooperation-section{
+    flex-direction: column;
+  }
+  .cooperation-image{
+    padding-right: 2%;
+  }
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 430px) {
+}
+@media (max-width: 330px) {
+}
 </style>
