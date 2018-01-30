@@ -1,7 +1,7 @@
 <template>
   <section class="services-section">
     <h3>{{ ServicesHeading }}</h3>
-    <p>{{ ServicesDecription }}</p>
+    <p class="services-description">{{ ServicesDescription }}</p>
     <div class="services-image">
       <img src="../../src/assets/img/services.jpg" alt="services-image">
       <img src="../../src/assets/img/services.jpg" alt="services-image">
@@ -59,9 +59,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/main";
   .services-section{
     order: 2;
     height: 100%;
     background: rgba(9, 0, 255, 0.68);
+    .services-image{
+      img{
+        max-width: 200px;
+        border-radius: 5px;
+      }
+    }
+    .services-price{
+      .price-list{
+        h4.services-type{}
+        table{}
+      }
+    }
   }
 </style>
