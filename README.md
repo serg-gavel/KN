@@ -1,4 +1,4 @@
-# kn
+# KN
 
 > A Vue.js project
 
