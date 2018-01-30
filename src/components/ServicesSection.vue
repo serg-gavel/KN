@@ -63,7 +63,7 @@ export default {
   .services-section{
     order: 2;
     height: 100%;
-    background: rgba(9, 0, 255, 0.68);
+    /*background: rgba(9, 0, 255, 0.68);*/
     h3{
       padding-top: 20px;
     }
@@ -78,8 +78,33 @@ export default {
     }
     .services-price{
       .price-list{
-        h4.services-type{}
-        table{}
+        h4.services-type{
+          padding: 20px 0;
+        }
+        table {
+          margin: 0 auto;
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 60%;
+          margin-bottom: 30px;
+          z-index: 3;
+        }
+        th{
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        td, th {
+          font-family: 'Oswald', sans-serif;
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        td,tr{
+          font-size: 0.9rem;
+        }
       }
     }
   }
