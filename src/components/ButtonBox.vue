@@ -1,0 +1,46 @@
+<template>
+  <div class="button-box">
+    <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
+    <button class="enroll-button btn">Записаться на маникюр</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ButtonBox'
+}
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/scss/main";
+  .button-box{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: #fff;
+    min-height: 90px;
+    button.visit-blog-button{
+    }
+    button.enroll-button{
+    }
+  }
+  .btn {
+    margin:10px 5px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5;
+    /*font: 700 1.2rem 'Roboto Slab', sans-serif;*/
+    padding: 15px 25px;
+    letter-spacing: 0.05rem;
+    &:hover{
+      background: rgba(27, 13, 52, 0.81);
+      color: #fff;
+      border: 2px solid rgba(27, 13, 52, 0.81);
+      transition: all .3s linear;
+      @include shadow;
+    }
+    &:focus {outline: none}
+  }
+</style>
