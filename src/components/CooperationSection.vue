@@ -1,6 +1,16 @@
 <template>
   <section class="cooperation-section">
-    <h1>{{msg}}</h1>
+    <div class="cooperation-image">
+      <img src="../../src/assets/img/cooperation.jpg" alt="cooperation-image">
+    </div>
+    <div class="cooperation-description">
+      <h3>Cooperation</h3>
+      <div class="description-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, cum?
+        </p>
+      </div>
+    </div>
   </section>
 </template>
 
