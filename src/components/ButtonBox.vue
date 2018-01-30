@@ -44,4 +44,23 @@ export default {
     }
     &:focus {outline: none}
   }
+/*media*/
+@media (max-width: 1200px) {
+}
+@media (max-width: 998px) {
+}
+@media (max-width: 770px) {
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 500px) {
+  .btn {
+    margin: 5px 5px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 430px) {
+}
+@media (max-width: 330px) {
+}
 </style>
