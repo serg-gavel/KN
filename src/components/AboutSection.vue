@@ -55,6 +55,7 @@ export default {
     .about-image{
       flex-basis: 48%;
       padding-left: 2%;
+      padding-bottom: 20px;
       img{
         width: 100%;
         @include shadow;
