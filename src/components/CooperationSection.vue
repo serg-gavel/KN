@@ -60,10 +60,7 @@ export default {
         align-self: flex-start;
       }
       .description-text{
-        padding: 0 5%;
-        p{
-          text-align: start;
-        }
+        padding: 1% 10%;
       }
     }
   }
