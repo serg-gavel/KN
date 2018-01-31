@@ -76,7 +76,7 @@ export default {
       img{
         margin: 0 1%;
         max-width: 295px;
-        border-radius: 5px;
+        /*border-radius: 5px;*/
         @include shadow;
       }
     }
@@ -116,6 +116,7 @@ export default {
   .services-image{
     img{
       max-width: 260px;
+      transition: all .7s linear;
     }
   }
 }
@@ -124,6 +125,7 @@ export default {
     .services-image {
       img {
         max-width: 220px;
+        transition: all .7s linear;
       }
     }
   }
@@ -134,6 +136,7 @@ export default {
       img {
         margin: 1% 0;
         max-width: 80%;
+        transition: all .7s linear;
       }
     }
   }
@@ -141,6 +144,7 @@ export default {
     .price-list{
       table.price-table{
         width: 85% !important;
+        transition: all .7s linear;
       }
     }
   }
