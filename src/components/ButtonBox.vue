@@ -17,7 +17,7 @@ export default {
     width: 100%;
     padding-top: 3%;
     padding-bottom: 5%;
-    background: #fff;
+    background: $button-color-background;
     min-height: 90px;
     button.visit-blog-button{
     }
@@ -27,8 +27,8 @@ export default {
   .btn {
     margin:10px 5px;
     background: #fff;
-    color: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    color: $button-color;
+    border: 2px solid $button-color;
     cursor: pointer;
     font-family: 'Oswald', sans-serif;
     line-height: 1.5;
@@ -36,9 +36,9 @@ export default {
     padding: 15px 25px;
     letter-spacing: 0.05rem;
     &:hover{
-      background: rgba(58, 58, 58, 1);
+      background: $button-color-hover;
       color: #fff;
-      border: 2px solid rgba(58, 58, 58, 1);
+      border: 2px solid $button-color-hover;
       transition: all .3s linear;
       @include shadow;
     }
@@ -57,7 +57,7 @@ export default {
   .btn {
     margin: 5px 5px;
     padding: 10px 20px;
-    transition: all .7s linear;
+    @include common_animation;
   }
 }
 @media (max-width: 430px) {
