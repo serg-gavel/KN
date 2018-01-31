@@ -2,7 +2,10 @@
   <div class="button-box">
     <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
     <button class="enroll-button btn">Записаться на маникюр</button>
-    <ModalWindow>ModalWindow</ModalWindow>
+    <button id="show-modal" @click="showModal = true">Show Modal</button>
+      <ModalWindow v-if="showModal" @close="showModal = false">
+        <h3 slot="header">custom header</h3>
+      </ModalWindow>
   </div>
 </template>
 
@@ -13,6 +16,7 @@ export default {
   name: 'ButtonBox',
   data () {
     return {
+      showModal: false
     }
   },
   components: { ModalWindow }
