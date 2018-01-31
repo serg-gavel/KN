@@ -138,7 +138,7 @@ export default {
     }
   }
   .services-price{
-    .price-list {
+    .price-list{
       table.price-table{
         width: 85% !important;
       }
