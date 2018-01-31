@@ -2,12 +2,20 @@
   <div class="button-box">
     <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
     <button class="enroll-button btn">Записаться на маникюр</button>
+    <ModalWindow>ModalWindow</ModalWindow>
   </div>
 </template>
 
 <script>
+import ModalWindow from './ModalWindow'
+
 export default {
-  name: 'ButtonBox'
+  name: 'ButtonBox',
+  data () {
+    return {
+    }
+  },
+  components: { ModalWindow }
 }
 </script>
 
