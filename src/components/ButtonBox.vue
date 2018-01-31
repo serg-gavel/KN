@@ -36,9 +36,9 @@ export default {
     padding: 15px 25px;
     letter-spacing: 0.05rem;
     &:hover{
-      background: rgba(27, 13, 52, 0.81);
+      background: rgba(58, 58, 58, 1);
       color: #fff;
-      border: 2px solid rgba(27, 13, 52, 0.81);
+      border: 2px solid rgba(58, 58, 58, 1);
       transition: all .3s linear;
       @include shadow;
     }
