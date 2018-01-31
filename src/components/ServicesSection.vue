@@ -74,8 +74,10 @@ export default {
     }
     .services-image{
       img{
-        max-width: 260px;
+        margin: 0 1%;
+        max-width: 295px;
         border-radius: 5px;
+        @include shadow;
       }
     }
     .services-price{
@@ -111,10 +113,30 @@ export default {
     }
   }
 @media (max-width: 1200px) {
+  .services-image{
+    img{
+      max-width: 260px;
+    }
+  }
 }
 @media (max-width: 998px) {
+  .services-section {
+    .services-image {
+      img {
+        max-width: 220px;
+      }
+    }
+  }
 }
 @media (max-width: 770px) {
+  .services-section {
+    .services-image {
+      img {
+        margin: 1% 0;
+        max-width: 80%;
+      }
+    }
+  }
   .services-price{
     .price-list {
       table.price-table{
