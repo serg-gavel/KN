@@ -116,7 +116,7 @@ export default {
   .services-image{
     img{
       max-width: 260px;
-      transition: all .7s linear;
+      @include common_animation;
     }
   }
 }
@@ -125,7 +125,7 @@ export default {
     .services-image {
       img {
         max-width: 220px;
-        transition: all .7s linear;
+        @include common_animation;
       }
     }
   }
@@ -136,7 +136,7 @@ export default {
       img {
         margin: 1% 0;
         max-width: 80%;
-        transition: all .7s linear;
+        @include common_animation;
       }
     }
   }
@@ -144,7 +144,7 @@ export default {
     .price-list{
       table.price-table{
         width: 85% !important;
-        transition: all .7s linear;
+        @include common_animation;
       }
     }
   }
