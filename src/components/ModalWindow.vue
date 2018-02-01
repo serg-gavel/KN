@@ -16,7 +16,7 @@
               <slot name="body">
                <div class="body-wrap">
                  <h5><i class="fab fa-instagram"></i>&nbsp;&nbsp;Напишите мне в Direct<a href="#">&nbsp;нажмите, чтобы перейти в Instagram</a><br></h5>
-                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a v-bind:href="'tel:'+phoneNumber+''" rel="nofollow">&nbsp;{{ phoneNumber }}</a></h5>
+                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a :href="'tel:'+phoneNumber+''" rel="nofollow">&nbsp;{{ phoneNumber }}</a></h5>
                </div>
               </slot>
             </div>
