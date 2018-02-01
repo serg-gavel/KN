@@ -6,18 +6,18 @@
             <div class="modal-header">
                 <span class="close" @click="$emit('close')">&times;</span>
               <slot name="header">
-                <h4>Для записи есть 2 варианта:</h4>
+                <h4>Для записи есть 2 варианта, но для этого необходимо :</h4>
                 <div class="header-wrap">
                   <h5>1. Наличие аккаунта Instagram для сообщений в Direct</h5>
-                  <h5>2. Позовнить мастеру по телефону предоставленному ниже</h5>
+                  <h5>2. Либо позовнить мастеру по телефону предоставленному ниже</h5>
                 </div>
               </slot>
             </div>
             <div class="modal-body">
               <slot name="body">
                <div class="body-wrap">
-                 <h5><i class="fab fa-instagram"></i>&nbsp;&nbsp;Напишите мне в Direct<a href="#"> Перейти в Instagram</a><br></h5>
-                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a href="tel:+099-999-99-99" rel="nofollow"> 099-999-99-99</a></h5>
+                 <h5><i class="fab fa-instagram"></i>&nbsp;&nbsp;Напишите мне в Direct<a href="#">&nbsp;нажмите, чтобы перейти в Instagram</a><br></h5>
+                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a href="tel:+099-999-99-99" rel="nofollow">&nbsp;099-999-99-99</a></h5>
                </div>
               </slot>
               <!--<form action="/action_page.php">-->
@@ -62,16 +62,16 @@ export default {
   @import "../assets/fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.min.css";
   h4{
     text-align: center;
-    padding-top: 40px;
+    padding-top: 38px;
     padding-right: 40px;
     padding-left: 40px;
     line-height: 1.3rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   h5{
     text-align: start;
     font-size: 1rem;
-    padding: 2px 0;
+    padding: 0;
   }
   i{
     font-size: 1.3rem;
@@ -89,13 +89,15 @@ export default {
       background-color: rgb(0,0,0);
       background-color: rgba(0,0,0,0.4);
     }
-    /*.modal-wrapper {*/
-      /*display: table-cell;*/
-      /*vertical-align: middle;*/
-    /*}*/
     .modal-container {
+      background-color: #fff;
+      background-image:
+        linear-gradient(90deg, transparent 79px, $gradient-color 79px, $gradient-color 81px, transparent 81px),
+        linear-gradient($gradient-spare-color .1em, transparent .1em);
+      background-size: 100% 1.2em;
       position: relative;
-      background-color: #fefefe;
+      color: $gradient-color;
+      /*background-color: #fefefe;*/
       margin: 0 auto;
       /*padding: 0 20px;*/
       border: 1px solid #888;
@@ -110,51 +112,41 @@ export default {
       }
       .modal-body{
         /*width: 300px;*/
+        padding-top: 15px;
         margin: 0 auto;
+        a{
+          color: $link-color-hover-h;
+        }
       }
       .modal-footer{}
       .header-wrap, .body-wrap{
         margin: 0 auto;
-        padding-top: 30px;
-        max-width: 360px;
+        padding-top: 40px;
+        max-width: 400px;
       }
     }
+    //body animation
     @-webkit-keyframes animatetop {
       from {top:-300px; opacity:0}
       to {top:0; opacity:1}
     }
-
     @keyframes animatetop {
       from {top:-300px; opacity:0}
       to {top:0; opacity:1}
     }
     .close {
-      padding: 10px 20px;
-      color: red;
+      padding: 13px 20px;
+      color: $gradient-color;
       float: right;
       font-size: 28px;
       font-weight: bold;
     }
     .close:hover,
     .close:focus {
-      color: #000;
+      color: $link-color-hover-h;
       text-decoration: none;
       cursor: pointer;
     }
-    /*.modal-body {*/
-      /*margin: 20px 0;*/
-    /*}*/
-    /*.modal-enter {*/
-      /*opacity: 0;*/
-    /*}*/
-    /*.modal-leave-active {*/
-      /*opacity: 0;*/
-    /*}*/
-    /*.modal-enter .modal-container,*/
-    /*.modal-leave-active .modal-container {*/
-      /*-webkit-transform: scale(1.1);*/
-      /*transform: scale(1.1);*/
-    /*}*/
   }
   .btn{
     margin:10px 5px;
