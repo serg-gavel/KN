@@ -6,10 +6,10 @@
             <div class="modal-header">
                 <span class="close" @click="$emit('close')">&times;</span>
               <slot name="header">
-                <h4>Для записи есть 2 варианта, но для этого необходимо :</h4>
+                <h4>{{ headerHeading }}</h4>
                 <div class="header-wrap">
-                  <h5>1. Наличие аккаунта Instagram для сообщений в Direct</h5>
-                  <h5>2. Либо позовнить мастеру по телефону предоставленному ниже</h5>
+                  <h5>{{ innerHeading.descriptionOne }}</h5>
+                  <h5>{{ innerHeading.descriptionTwo }}</h5>
                 </div>
               </slot>
             </div>
@@ -20,23 +20,12 @@
                  <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a href="tel:+099-999-99-99" rel="nofollow">&nbsp;099-999-99-99</a></h5>
                </div>
               </slot>
-              <!--<form action="/action_page.php">-->
-                <!--<input v-model="message" placeholder="Ваше имя">-->
-                <!--<p>Имя: {{ message }}</p>-->
-                <!--<input v-model="phoneNumber" placeholder="Ваш номер телефона">-->
-                <!--<p>Номер телефона: {{ phoneNumber }}</p>-->
-                <!--<input v-model="dateTime" placeholder="Предпочитаемая дата и время">-->
-                <!--<p>Дата и время: {{ dateTime }}</p>-->
-                <!--&lt;!&ndash;Last name:<br>&ndash;&gt;-->
-                <!--&lt;!&ndash;<input type="text" name="lastname" value="Mouse">&ndash;&gt;-->
-                <!--<input class="btn" type="submit" value="Записаться">-->
-              <!--</form>-->
             </div>
-            <div class="modal-footer">
-              <!--<slot name="footer">-->
-                <!--default footer-->
-              <!--</slot>-->
-            </div>
+            <!--<div class="modal-footer">-->
+              <!--&lt;!&ndash;<slot name="footer">&ndash;&gt;-->
+                <!--&lt;!&ndash;default footer&ndash;&gt;-->
+              <!--&lt;!&ndash;</slot>&ndash;&gt;-->
+            <!--</div>-->
         </div>
       </div>
     </transition>
@@ -51,7 +40,12 @@ export default {
     return {
       message: '',
       phoneNumber: '',
-      dateTime: ''
+      dateTime: '',
+      headerHeading: 'Для записи есть 2 варианта, но для этого необходимо :',
+      innerHeading: {
+        descriptionOne: '1. Наличие аккаунта Instagram для сообщений в Direct',
+        descriptionTwo: '2. Либо позовнить мастеру по телефону предоставленному ниже'
+      }
     }
   }
 }
@@ -90,6 +84,7 @@ export default {
       background-color: rgba(0,0,0,0.4);
     }
     .modal-container {
+      border-radius: 5px;
       background-color: #fff;
       background-image:
         linear-gradient(90deg, transparent 79px, $gradient-color 79px, $gradient-color 81px, transparent 81px),
@@ -97,9 +92,7 @@ export default {
       background-size: 100% 1.2em;
       position: relative;
       color: $gradient-color;
-      /*background-color: #fefefe;*/
       margin: 0 auto;
-      /*padding: 0 20px;*/
       border: 1px solid #888;
       max-width: 700px;
       height: 300px;
@@ -111,7 +104,6 @@ export default {
       .modal-header{
       }
       .modal-body{
-        /*width: 300px;*/
         padding-top: 15px;
         margin: 0 auto;
         a{
