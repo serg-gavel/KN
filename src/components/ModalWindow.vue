@@ -1,12 +1,11 @@
 <template>
   <div class="modal-window">
-    <transition name="modal">
       <div class="modal-mask">
           <div class="modal-container">
             <div class="modal-header">
                 <span class="close" @click="$emit('close')">&times;</span>
               <slot name="header">
-                <h4>{{ headerHeading }} {{ parentData }}</h4>
+                <h4>{{ headerHeading }}</h4>
                 <div class="header-wrap">
                   <h5>{{ innerHeading.descriptionOne }}</h5>
                   <h5>{{ innerHeading.descriptionTwo }}</h5>
@@ -17,18 +16,12 @@
               <slot name="body">
                <div class="body-wrap">
                  <h5><i class="fab fa-instagram"></i>&nbsp;&nbsp;Напишите мне в Direct<a href="#">&nbsp;нажмите, чтобы перейти в Instagram</a><br></h5>
-                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a href="tel:+099-999-99-99" rel="nofollow">&nbsp;099-999-99-99</a></h5>
+                 <h5><i class="fas fa-phone"></i>&nbsp;Свяжитесь со мной по телефону<a :href="telPhoneNumber" rel="nofollow">&nbsp;{{ phoneNumber }}</a></h5>
                </div>
               </slot>
             </div>
-            <!--<div class="modal-footer">-->
-              <!--&lt;!&ndash;<slot name="footer">&ndash;&gt;-->
-                <!--&lt;!&ndash;default footer&ndash;&gt;-->
-              <!--&lt;!&ndash;</slot>&ndash;&gt;-->
-            <!--</div>-->
         </div>
       </div>
-    </transition>
   </div>
 </template>
 
@@ -36,12 +29,11 @@
 
 export default {
   name: 'ModalWindow',
-  props: ['parentData'],
   data () {
     return {
       message: '',
-      phoneNumber: '',
-      dateTime: '',
+      phoneNumber: '099-123-45-67',
+      telPhoneNumber: 'tel:380991234567',
       headerHeading: 'Для записи есть 2 варианта, но для этого необходимо :',
       innerHeading: {
         descriptionOne: '1. Наличие аккаунта Instagram для сообщений в Direct',
