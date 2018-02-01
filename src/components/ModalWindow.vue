@@ -6,7 +6,7 @@
             <div class="modal-header">
                 <span class="close" @click="$emit('close')">&times;</span>
               <slot name="header">
-                <h4>{{ headerHeading }}</h4>
+                <h4>{{ headerHeading }} {{ parentData }}</h4>
                 <div class="header-wrap">
                   <h5>{{ innerHeading.descriptionOne }}</h5>
                   <h5>{{ innerHeading.descriptionTwo }}</h5>
@@ -36,6 +36,7 @@
 
 export default {
   name: 'ModalWindow',
+  props: ['parentData'],
   data () {
     return {
       message: '',
