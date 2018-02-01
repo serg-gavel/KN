@@ -127,10 +127,10 @@ export default {
       to {top:0; opacity:1}
     }
     .close {
-      padding: 13px 20px;
+      padding: 11px 20px;
       color: $gradient-color;
       float: right;
-      font-size: 28px;
+      font-size: 33px;
       font-weight: bold;
     }
     .close:hover,
