@@ -2,11 +2,7 @@
   <div class="button-box">
     <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
     <button class="enroll-button btn" id="show-modal" @click="showModal = true">Записаться на маникюр</button>
-      <ModalWindow v-if="showModal" @close="showModal = false">
-        <!--<h3 slot="header">custom header</h3>-->
-        <!--<h3 slot="body">custom body</h3>-->
-        <!--<h3 slot="footer">custom footer</h3>-->
-      </ModalWindow>
+      <ModalWindow v-if="showModal" @close="showModal = false">modal</ModalWindow>
   </div>
 </template>
 
@@ -46,7 +42,6 @@ export default {
     font-family: 'Oswald', sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
-    /*font: 700 1.2rem 'Roboto Slab', sans-serif;*/
     padding: 15px 25px;
     letter-spacing: 0.05rem;
     &:hover{
