@@ -1,8 +1,8 @@
 <template>
   <div class="button-box">
     <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
-    <button class="enroll-button btn" id="show-modal" @click="showModal = true">Записаться на маникюр</button>
-      <ModalWindow v-if="showModal" @close="showModal = false">modal</ModalWindow>
+    <button class="enroll-button btn" id="show-modal" @click="showModal = true" v-bind:parentData="parentData">Записаться на маникюр</button>
+      <ModalWindow v-if="showModal" @close="showModal = false" :parentData="parentData">modal</ModalWindow>
   </div>
 </template>
 
@@ -13,7 +13,8 @@ export default {
   name: 'ButtonBox',
   data () {
     return {
-      showModal: false
+      showModal: false,
+      parentData: ''
     }
   },
   components: { ModalWindow }
