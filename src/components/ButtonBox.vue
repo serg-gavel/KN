@@ -3,9 +3,9 @@
     <router-link to="/blog" tag="button" class="visit-blog-button btn">Перейти в блог</router-link>
     <button class="enroll-button btn" id="show-modal" @click="showModal = true">Записаться на маникюр</button>
       <ModalWindow v-if="showModal" @close="showModal = false">
-        <h3 slot="header">custom header</h3>
-        <h3 slot="body">custom body</h3>
-        <h3 slot="footer">custom footer</h3>
+        <!--<h3 slot="header">custom header</h3>-->
+        <!--<h3 slot="body">custom body</h3>-->
+        <!--<h3 slot="footer">custom footer</h3>-->
       </ModalWindow>
   </div>
 </template>
