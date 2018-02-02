@@ -5,6 +5,7 @@ import BlogSection from '@/components/BlogSection'
 import ServicesSection from '@/components/ServicesSection'
 import CooperationSection from '@/components/CooperationSection'
 import AboutSection from '@/components/AboutSection'
+import PostInner from '@/components/PostInner'
 
 Vue.use(Router)
 
@@ -29,6 +30,10 @@ export default new Router({
     {path: '/about',
       name: 'AboutSection',
       component: AboutSection
+    },
+    {path: '/post',
+      name: 'PostInner',
+      component: PostInner
     }
   ]
 })

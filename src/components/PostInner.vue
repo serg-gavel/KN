@@ -29,8 +29,8 @@ export default {
 <style lang="scss" scoped>
   @import "../assets/scss/main";
   .post-inner{
-    margin: 30px 0 50px 10px;
-    width: 320px;
+    margin: 50px 0 50px 0;
+    width: 100%;
     height: 470px;
     @include shadow;
     &:hover{
@@ -40,7 +40,7 @@ export default {
   //post header
   .post-header{
     height: 90px;
-    width: 320px;
+    width: 100%;
     background: $color-graphite;
     color: $color-white;
     h4.post-heading{
@@ -56,11 +56,11 @@ export default {
   }
   //post body
   .post-body{
-    width: 320px;
+    width: 100%;
     height: 350px;
     .post-image{
       height: 350px;
-      width: 320px;
+      width: 100%;
       overflow: hidden;
       img{
         height: auto;
@@ -97,7 +97,7 @@ export default {
   }
   .post-footer{
     height: 30px;
-    width: 320px;
+    width: 100%;
     background: $color-graphite;
     .views-count{
       p.views{

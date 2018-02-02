@@ -9,7 +9,7 @@
         <img src="../assets/img/sunflower.jpg" alt="#">
       </div>
       <div class="read-more">
-        <button class="post-btn">Read More...</button>
+        <router-link to="/post" tag="button" class="post-btn">Read More...</router-link>
       </div>
     </div>
     <div class="post-footer">
