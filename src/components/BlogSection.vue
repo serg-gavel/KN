@@ -21,6 +21,6 @@ export default {
   .blog-section{
     order: 2;
     height: 100%;
-    background: rgba(255, 250, 57, 0.68);
+    /*background: rgba(255, 250, 57, 0.68);*/
   }
 </style>
