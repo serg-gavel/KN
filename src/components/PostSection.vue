@@ -1,6 +1,8 @@
 <template>
   <section class="post-section">
     <PostCover>PostCover</PostCover>
+    <PostCover>PostCover</PostCover>
+    <PostCover>PostCover</PostCover>
   </section>
 </template>
 
@@ -21,5 +23,8 @@ export default {
   .post-section{
     order: 2;
     min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 </style>
