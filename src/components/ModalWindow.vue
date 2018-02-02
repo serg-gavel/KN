@@ -32,7 +32,7 @@ export default {
   data () {
     return {
       message: '',
-      phoneNumber: '099-123-45-11',
+      phoneNumber: '099-123-45-12',
       headerHeading: 'Для записи есть 2 варианта, но для этого необходимо :',
       innerHeading: {
         descriptionOne: '1. Наличие аккаунта Instagram для сообщений в Direct',
