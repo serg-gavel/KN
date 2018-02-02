@@ -6,7 +6,7 @@
     </div>
     <div class="post-body">
       <div class="post-image">
-        <img src="../assets/img/pizza.jpg" alt="#">
+        <img src="../assets/img/sunflower.jpg" alt="#">
       </div>
       <div class="read-more">
         <button class="post-btn">Read More...</button>
@@ -80,7 +80,7 @@ export default {
         border: 2px solid $button-color-white;
         cursor: pointer;
         font-family: 'Oswald', sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.5;
         padding: 10px 25px;
         letter-spacing: 0.05rem;
