@@ -7,7 +7,7 @@
       </div>
       <div class="post-body">
         <div class="post-image">
-          <img src="../assets/img/cooperation.jpg" alt="#">
+          <img src="../assets/img/pizza.jpg" alt="#">
         </div>
         <div class="read-more">
           <button class="post-btn">Read More...</button>
@@ -37,22 +37,28 @@ export default {
   .post-section{
     order: 2;
     min-height: 100%;
-    background: rgba(0, 38, 255, 0.68);
+    /*background: rgba(0, 38, 255, 0.68);*/
     .post-inner{
-      padding-top: 30px;
+      margin-left: 10px;
+      margin-top: 30px;
       width: 320px;
-      background: green;
+      /*background: green;*/
       height: 470px;
       margin-bottom: 50px;
+      @include shadow;
+      &:hover{
+        @include shadow_deep;
+      }
     }
   }
   //post header
   .post-header{
     height: 90px;
     width: 320px;
-    background: #00c5ff;
+    background: $color-graphite;
+    color: $color-white;
     h4.post-heading{
-      padding-top: 20px;
+      padding-top: 25px;
       line-height: 1rem;
       text-align: center;
     }
@@ -72,7 +78,8 @@ export default {
       overflow: hidden;
       img{
         height: auto;
-        width: 100%;
+        width: 130%;
+        overflow: hidden;
       }
     }
     .read-more{
@@ -85,7 +92,7 @@ export default {
         bottom: 30px;
         position: absolute;
         /*margin:10px 5px;*/
-        background: transparent;
+        background: rgba(58, 58, 58, 0.35);
         color: $button-color-white;
         border: 2px solid $button-color-white;
         cursor: pointer;
@@ -113,7 +120,7 @@ export default {
   .post-footer{
     height: 30px;
     width: 320px;
-    background: darkslategrey;
+    background: $color-graphite;
     .views-count{
       p.views{
         color: #fff;
