@@ -2,7 +2,6 @@
   <section class="blog-section">
     <h3>BlogSection</h3>
     <PostSection>PostSection1</PostSection>
-    <PostSection>PostSection2</PostSection>
   </section>
 </template>
 
