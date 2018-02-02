@@ -32,7 +32,7 @@ export default {
   data () {
     return {
       message: '',
-      phoneNumber: '099-123-45-67',
+      phoneNumber: '099-123-45-11',
       headerHeading: 'Для записи есть 2 варианта, но для этого необходимо :',
       innerHeading: {
         descriptionOne: '1. Наличие аккаунта Instagram для сообщений в Direct',
@@ -158,10 +158,51 @@ export default {
   @media (max-width: 998px) {
   }
   @media (max-width: 770px) {
+    .modal-window {
+      .modal-container {
+        max-width: 500px;
+        height: 250px;
+        background-image:
+          linear-gradient(90deg, transparent 16px, $gradient-color 16px, $gradient-color 18px, transparent 18px),
+          linear-gradient($gradient-spare-color .1em, transparent .1em);
+        h4{
+          font-size: 1rem;
+        }
+        h5{
+          font-size: .95rem;
+        }
+      }
+    }
   }
   @media (max-width: 570px) {
   }
   @media (max-width: 500px) {
+    .modal-window {
+      .modal-container {
+        padding-top: 5px;
+        padding-left: 2%;
+        max-width: 360px;
+        height: 250px;
+        background-image:
+          linear-gradient(90deg, transparent 10px, $gradient-color-h 10px, $gradient-color-h 11px, transparent 11px),
+          linear-gradient($gradient-spare-color .1em, transparent .1em);
+        h4{
+          padding-top: 10px;
+          font-size: .9rem;
+        }
+        h5{
+          padding-top: 2px;
+          font-size: .85rem;
+        }
+      }
+      .close {
+        padding: 10px 20px;
+        color: $gradient-color;
+        float: right;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
   }
   @media (max-width: 430px) {
   }
