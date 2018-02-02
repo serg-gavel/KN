@@ -46,6 +46,7 @@
         <div class="read-more">
           <router-link to="/blog" tag="button" class="post-btn">Вернуться назад</router-link>
         </div>
+        <ShareBox>ShareBox</ShareBox>
       </div>
     </div>
     <div class="post-footer">
@@ -57,6 +58,7 @@
 </template>
 
 <script>
+import ShareBox from './ShareBox'
 export default {
   name: 'PostInner',
   data () {
@@ -64,7 +66,8 @@ export default {
       postDate: '12.02.18',
       postViews: 999
     }
-  }
+  },
+  components: { ShareBox }
 }
 </script>
 
