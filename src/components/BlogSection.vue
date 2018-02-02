@@ -1,5 +1,6 @@
 <template>
   <section class="blog-section">
+    <h3>BlogSection</h3>
     <PostSection>PostSection1</PostSection>
     <PostSection>PostSection2</PostSection>
   </section>
@@ -20,7 +21,7 @@ export default {
 <style lang="scss" scoped>
   .blog-section{
     order: 2;
-    /*height: 100%;*/
+    height: 100%;
     background: rgba(255, 250, 57, 0.68);
   }
 </style>
