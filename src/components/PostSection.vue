@@ -1,6 +1,5 @@
 <template>
   <section class="post-section">
-    <h3>PostSection</h3>
     <div class="post-inner">
       <div class="post-header">
           <h4 class="post-heading">Подсолнухи – спутники солнца, подобны глазам твоим светлым</h4>
@@ -8,10 +7,10 @@
       </div>
       <div class="post-body">
         <div class="post-image">
-          <img src="../assets/img/sunflower.jpg" alt="#">
+          <img src="../assets/img/cooperation.jpg" alt="#">
         </div>
         <div class="read-more">
-          <button>Read More...</button>
+          <button class="post-btn">Read More...</button>
         </div>
       </div>
       <div class="post-footer">
@@ -34,22 +33,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/main";
   .post-section{
     order: 2;
-    height: 520px;
+    min-height: 100%;
     background: rgba(0, 38, 255, 0.68);
-    flex-direction: column;
     .post-inner{
+      padding-top: 30px;
       width: 320px;
       background: green;
-      height: 450px;
+      height: 470px;
+      margin-bottom: 50px;
     }
   }
   //post header
   .post-header{
+    height: 90px;
+    width: 320px;
     background: #00c5ff;
     h4.post-heading{
-      padding-top: 15px;
+      padding-top: 20px;
       line-height: 1rem;
       text-align: center;
     }
@@ -60,19 +63,65 @@ export default {
   }
   //post body
   .post-body{
+    width: 320px;
+    height: 350px;
     background: red;
     .post-image{
-      max-width: 320px;
+      height: 350px;
+      width: 320px;
+      overflow: hidden;
       img{
+        height: auto;
         width: 100%;
       }
     }
-  }
+    .read-more{
+      background: yellowgreen;
+      height: 0;
+      position: relative;
+      padding-right: 100px;
+      /*padding-bottom: 40px;*/
+      button.post-btn {
+        bottom: 30px;
+        position: absolute;
+        /*margin:10px 5px;*/
+        background: transparent;
+        color: $button-color-white;
+        border: 2px solid $button-color-white;
+        cursor: pointer;
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 10px 25px;
+        letter-spacing: 0.05rem;
+        &:hover{
+          background: $button-color-hover;
+          color: #fff;
+          border: 2px solid $button-color-hover;
+          transition: all .3s linear;
+          @include shadow;
+        }
+        &:focus {outline: none}
+      }
+        /*float: left;*/
+        /*position: absolute;*/
+        /*bottom: 40px;*/
+        /*margin-left: 10px;*/
+        /*margin: 0 auto;*/
+      }
+    }
   .post-footer{
+    height: 30px;
+    width: 320px;
     background: darkslategrey;
     .views-count{
       p.views{
         color: #fff;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        padding-top: 5px;
+        padding-right: 10px;
       }
     }
   }
