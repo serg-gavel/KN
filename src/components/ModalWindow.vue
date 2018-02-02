@@ -90,9 +90,9 @@ export default {
       height: 300px;
       @include shadow_deep;
       -webkit-animation-name: animatetop;
-      -webkit-animation-duration: 0.6s;
+      -webkit-animation-duration: .6s;
       animation-name: animatetop;
-      animation-duration: 0.6s;
+      animation-duration: .6s;
       .modal-header{
       }
       .modal-body{
@@ -142,7 +142,7 @@ export default {
     font-size: 0.9rem;
     line-height: 1.5;
     padding: 15px 25px;
-    letter-spacing: 0.05rem;
+    letter-spacing: .05rem;
     &:hover{
       background: $button-color-hover;
       color: #fff;
@@ -182,7 +182,6 @@ export default {
         padding-top: 5px;
         padding-left: 2%;
         max-width: 360px;
-        height: 250px;
         background-image:
           linear-gradient(90deg, transparent 10px, $gradient-color-h 10px, $gradient-color-h 11px, transparent 11px),
           linear-gradient($gradient-spare-color .1em, transparent .1em);
@@ -197,10 +196,7 @@ export default {
       }
       .close {
         padding: 10px 20px;
-        color: $gradient-color;
-        float: right;
         font-size: 22px;
-        font-weight: bold;
       }
     }
   }
