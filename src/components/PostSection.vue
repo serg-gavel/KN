@@ -26,5 +26,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-left: 10px;
   }
 </style>
