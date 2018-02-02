@@ -1,21 +1,22 @@
 <template>
   <section class="blog-section">
-    <h1>{{msg}}</h1>
+    <PostSection>PostSection1</PostSection>
+    <PostSection>PostSection2</PostSection>
   </section>
 </template>
 
 <script>
+import PostSection from './PostSection'
 export default {
   name: 'BlogSection',
   data () {
     return {
-      msg: 'Blog Section!'
     }
-  }
+  },
+  components: { PostSection }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .blog-section{
     order: 2;
