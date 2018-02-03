@@ -53,7 +53,6 @@ export default {
     font-family: 'Oswald', sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
-    /*padding: 10px 10px;*/
     letter-spacing: 0.05rem;
     &:hover{
       color: #fff;
@@ -90,12 +89,6 @@ export default {
   @media (max-width: 570px) {
   }
   @media (max-width: 500px) {
-    .btn {
-      font-size: 0.8rem;
-      margin: 5px 5px;
-      padding: 10px 20px;
-      @include common_animation;
-    }
   }
   @media (max-width: 430px) {
   }
