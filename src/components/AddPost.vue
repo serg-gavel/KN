@@ -9,13 +9,13 @@
         <textarea name="" id="" cols="30" rows="10" v-model.lazy="blog.content"></textarea>
         <div id="checkbox">
           <label for="">Маникюр</label>
-          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="маникюр" v-model="blog.categories" title="categories-input">
           <label for="">Лаки</label>
-          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="лаки" v-model="blog.categories" title="categories-input">
           <label for="">Дизайн</label>
-          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="дизайн" v-model="blog.categories" title="categories-input">
           <label for="">Советы</label>
-          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="советы" v-model="blog.categories" title="categories-input">
         </div>
       </form>
       <!--preview-->
@@ -24,6 +24,10 @@
         <p><span>Blog Title:</span> {{ blog.title }}</p>
         <p><span>Blog Content:</span></p>
         <p>{{ blog.content }}</p>
+        <p><span>Blog Categories:</span></p>
+        <ul>
+          <li v-for="category in blog.categories" :key="category.id">{{ category }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -98,5 +102,17 @@ export default {
     p{
       width: 300px;
     }
+    ul{
+      li{
+        list-style-type: circle;
+      }
+    }
+  }
+  #checkbox input{
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #checkbox label{
+    display: inline-block;
   }
 </style>
