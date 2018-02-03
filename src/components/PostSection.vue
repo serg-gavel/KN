@@ -11,13 +11,14 @@
 
 <script>
 import PostCover from './PostCover'
+import AddPost from './AddPost'
 export default {
   name: 'PostSection',
   data () {
     return {
     }
   },
-  components: { PostCover }
+  components: { PostCover, AddPost }
 }
 </script>
 
