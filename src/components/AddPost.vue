@@ -4,18 +4,18 @@
       <h1>Add a new Blog Post</h1>
       <form action="#">
         <label for="">Blog Title: </label>
-        <input type="text" title="blog-title" v-model.lazy="blog.title" required>
+        <input type="text"  v-model.lazy="blog.title" title="title-input" required>
         <label for="">Blog Content: </label>
         <textarea name="" id="" cols="30" rows="10" v-model.lazy="blog.content"></textarea>
         <div id="checkbox">
           <label for="">Маникюр</label>
-          <input type="checkbox" value="" v-model="blog.categories">
+          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
           <label for="">Лаки</label>
-          <input type="checkbox" value="" v-model="blog.categories">
+          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
           <label for="">Дизайн</label>
-          <input type="checkbox" value="" v-model="blog.categories">
+          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
           <label for="">Советы</label>
-          <input type="checkbox" value="" v-model="blog.categories">
+          <input type="checkbox" value="" v-model="blog.categories" title="categories-input">
         </div>
       </form>
       <!--preview-->
