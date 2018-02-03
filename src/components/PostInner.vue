@@ -5,9 +5,9 @@
       <p class="post-date">{{ postDate }}</p>
     </header>
     <main class="post-body">
-      <div class="post-image">
+      <figure class="post-image">
         <img src="../assets/img/sunflower.jpg" alt="#">
-      </div>
+      </figure>
       <article class="post-text">
         <p class="inner-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam
@@ -43,9 +43,7 @@
           perspiciatis rem repellat repellendus saepe sunt ullam unde voluptate volupt
           atibus?
         </p>
-        <div class="read-more">
           <router-link to="/blog" tag="button" class="post-btn">Вернуться назад</router-link>
-        </div>
         <ShareBox>ShareBox</ShareBox>
       </article>
     </main>
@@ -85,6 +83,7 @@ export default {
   //post header
   .post-header{
     height: 90px;
+    max-height: 100%;
     width: 100%;
     background: $color-graphite;
     color: $color-white;
@@ -97,13 +96,15 @@ export default {
     p.post-date{
       text-align: right;
       padding-right: 10px;
+      padding-top: 0;
     }
   }
   //post body
   .post-body{
     width: 100%;
     min-height: 100%;
-    .post-image{
+    figure.post-image{
+      margin: 0;
       height: 350px;
       width: 100%;
       overflow: hidden;
@@ -163,6 +164,19 @@ export default {
         margin: 0;
         text-align: right;
         padding: 5px 10px 0 0;
+      }
+    }
+  }
+  /*media*/
+  @media (max-width: 470px) {
+    .post-header {
+      height: 100px;
+    }
+    .post-inner {
+      .post-header {
+        h1.post-heading {
+          font-size: 1rem;
+        }
       }
     }
   }
