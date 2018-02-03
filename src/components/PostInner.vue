@@ -1,14 +1,14 @@
 <template>
   <div class="post-inner">
-    <div class="post-header">
-      <h4 class="post-heading">Подсолнухи – спутники солнца, подобны глазам твоим светлым</h4>
+    <header class="post-header">
+      <h1 class="post-heading">Подсолнухи – спутники солнца, подобны глазам твоим светлым</h1>
       <p class="post-date">{{ postDate }}</p>
-    </div>
-    <div class="post-body">
+    </header>
+    <main class="post-body">
       <div class="post-image">
         <img src="../assets/img/sunflower.jpg" alt="#">
       </div>
-      <div class="post-text">
+      <article class="post-text">
         <p class="inner-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam
           aspernatur aut debitis dolores eveniet exercitationem facilis labore
@@ -47,13 +47,13 @@
           <router-link to="/blog" tag="button" class="post-btn">Вернуться назад</router-link>
         </div>
         <ShareBox>ShareBox</ShareBox>
-      </div>
-    </div>
-    <div class="post-footer">
+      </article>
+    </main>
+    <footer class="post-footer">
       <div class="views-count">
         <p class="views">{{ postViews }}&nbsp;просмотров</p>
       </div>
-    </div>
+    </footer>
   </div>
 </template>
 
@@ -88,7 +88,7 @@ export default {
     width: 100%;
     background: $color-graphite;
     color: $color-white;
-    h4.post-heading{
+    h1.post-heading{
       padding: 35px 10px 0 10px;
       font-size: 1.1rem;
       line-height: 1rem;
