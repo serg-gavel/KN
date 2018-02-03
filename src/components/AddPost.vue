@@ -4,15 +4,16 @@
       <h1>Add a new Blog Post</h1>
       <form action="#">
         <label for="">Blog Title: </label>
-        <input type="text" title="blog-title" required>
+        <input type="text" title="blog-title" v-model.lazy="blog.title" required>
         <label for="">Blog Content: </label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10" v-model.lazy="blog.content"></textarea>
       </form>
       <!--preview-->
       <div id="preview">
         <h2>Preview Post</h2>
-        <p>Blog Title:</p>
-        <p>Blog Content:</p>
+        <p><span>Blog Title:</span> {{ blog.title }}</p>
+        <p><span>Blog Content:</span></p>
+        <p>{{ blog.content }}</p>
       </div>
     </div>
   </div>
@@ -23,6 +24,10 @@ export default {
   name: 'AddPost',
   data () {
     return {
+      blog: {
+        title: '',
+        content: ''
+      }
     }
   }
 }
@@ -48,6 +53,14 @@ export default {
       font-size: 1.3rem;
       font-weight: 400;
     }
+    p{
+      font-size: 1rem;
+      color: $color-graphite;
+    }
+    p>span{
+      font-size: 1.1rem;
+      color: #000;
+    }
   }
   .add-post *{
     box-sizing: border-box;
@@ -56,6 +69,7 @@ export default {
     margin: 0 auto;
     max-width: 900px;
     min-width: 400px;
+    width: 300px;
   }
   label{
     display: block;
@@ -66,8 +80,12 @@ export default {
     width: 100%;
   }
   #preview{
+    width: 100%;
     padding: 10px 20px;
     border: 2px solid $color-graphite;
     margin: 30px 0;
+    p{
+      width: 300px;
+    }
   }
 </style>
