@@ -9,12 +9,12 @@
         <img src="../assets/img/sunflower.jpg" alt="#">
       </div>
       <div class="read-more">
-        <router-link to="/post" tag="button" class="post-btn">Read More...</router-link>
+        <router-link to="/post" tag="button" class="post-btn">Читать далее...</router-link>
       </div>
     </div>
     <div class="post-footer">
       <div class="views-count">
-        <p class="views">150 views</p>
+        <p class="views">150 просмотров</p>
       </div>
     </div>
   </div>

@@ -51,7 +51,7 @@
     </div>
     <div class="post-footer">
       <div class="views-count">
-        <p class="views">{{ postViews }}&nbsp;views</p>
+        <p class="views">{{ postViews }}&nbsp;просмотров</p>
       </div>
     </div>
   </div>
