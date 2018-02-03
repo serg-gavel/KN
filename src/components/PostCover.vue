@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/main";
   .post-cover{
-    margin: 30px 0 50px 10px;
+    margin: 0 0 10px 10px;
     width: 320px;
     height: 470px;
     @include shadow;

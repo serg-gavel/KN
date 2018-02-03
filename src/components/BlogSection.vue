@@ -23,7 +23,7 @@ export default {
     height: 100%;
     /*background: rgba(255, 250, 57, 0.68);*/
     h3{
-      padding-top: 20px;
+      padding: 20px 0 20px 0;
     }
   }
 </style>

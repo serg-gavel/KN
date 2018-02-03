@@ -115,9 +115,13 @@ export default {
     }
     .post-text{
       margin: 0 auto;
-      width: 90%;
+      width: 85%;
       p.inner-text{
-        /*width: 80%;*/
+        color: $color-graphite;
+        text-indent: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        font-weight: 400;
         padding: 10px 0 10px 0;
       }
       button.post-btn {

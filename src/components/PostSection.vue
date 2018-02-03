@@ -3,6 +3,9 @@
     <PostCover>PostCover</PostCover>
     <PostCover>PostCover</PostCover>
     <PostCover>PostCover</PostCover>
+    <PostCover>PostCover</PostCover>
+    <PostCover>PostCover</PostCover>
+    <PostCover>PostCover</PostCover>
   </section>
 </template>
 
