@@ -29,12 +29,10 @@ export default {
   @import "../assets/fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.min.css";
   .share-box{
     width: 100%;
-    padding-top: 3%;
-    padding-bottom: 5%;
+    margin-top: 30px;
+    margin-bottom: 10px;
     background: $button-color-background;
     min-height: 90px;
-    button.visit-blog-button{
-    }
     button.share-button{
     }
     i{
