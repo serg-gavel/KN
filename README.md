@@ -1,6 +1,5 @@
 # KN
 [![GitHub issues](https://img.shields.io/github/issues/serg-gavel/KN.svg?style=flat-square)](https://github.com/serg-gavel/KN/issues)
-[![GitHub issues](https://img.shields.io/github/downloads/serg-gavel/KN/total.svg?style=flat-square)](https://github.com/serg-gavel/KN/downloads)
 
 > A Vue.js project
 
