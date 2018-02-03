@@ -7,6 +7,16 @@
         <input type="text" title="blog-title" v-model.lazy="blog.title" required>
         <label for="">Blog Content: </label>
         <textarea name="" id="" cols="30" rows="10" v-model.lazy="blog.content"></textarea>
+        <div id="checkbox">
+          <label for="">Маникюр</label>
+          <input type="checkbox" value="" v-model="blog.categories">
+          <label for="">Лаки</label>
+          <input type="checkbox" value="" v-model="blog.categories">
+          <label for="">Дизайн</label>
+          <input type="checkbox" value="" v-model="blog.categories">
+          <label for="">Советы</label>
+          <input type="checkbox" value="" v-model="blog.categories">
+        </div>
       </form>
       <!--preview-->
       <div id="preview">
@@ -26,7 +36,8 @@ export default {
     return {
       blog: {
         title: '',
-        content: ''
+        content: '',
+        categories: []
       }
     }
   }
