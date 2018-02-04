@@ -10,7 +10,7 @@
     <h1>All posts</h1>
     <!-- eslint-disable-next-line -->
     <div v-for="post in posts">
-      <h3 v-rainbow>{{ post.title }}</h3>
+      <h3>{{ post.title }}</h3>
       <article>{{ post.body }}</article>
     </div>
   </section>
