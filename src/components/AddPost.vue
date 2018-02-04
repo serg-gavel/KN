@@ -21,6 +21,7 @@
         <select v-model="blog.author" title="select-author" id="select-author">
           <option v-for="author in authors" :key="author">{{ author }}</option>
         </select>
+        <button @click.prevent="addPost" >Add Post</button>
       </form>
       <!--preview-->
       <div id="preview">
@@ -39,6 +40,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'AddPost',
   data () {
@@ -50,6 +52,17 @@ export default {
         author: ''
       },
       authors: ['Katyusha Nakon', 'Nakon Nails', 'Administrator']
+    }
+  },
+  methods: {
+    addPost: function () {
+      axios.post('https://jsonplaceholder.typicode.com/posts', {
+        title: this.blog.title,
+        body: this.blog.content,
+        userId: 1
+      }).then(function (data) {
+        console.log(data)
+      })
     }
   }
 }
