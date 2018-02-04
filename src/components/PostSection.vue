@@ -1,24 +1,45 @@
 <template>
   <section class="post-section">
     <PostCover>PostCover</PostCover>
-    <PostCover>PostCover</PostCover>
-    <PostCover>PostCover</PostCover>
-    <PostCover>PostCover</PostCover>
-    <PostCover>PostCover</PostCover>
-    <PostCover>PostCover</PostCover>
+    <!--<div>{{posts}}</div>-->
+    <!--<PostCover>PostCover</PostCover>-->
+    <!--<PostCover>PostCover</PostCover>-->
+    <!--<PostCover>PostCover</PostCover>-->
+    <!--<PostCover>PostCover</PostCover>-->
+    <!--<PostCover>PostCover</PostCover>-->
+    <h1>All posts</h1>
+    <!-- eslint-disable-next-line -->
+    <div v-for="post in posts">
+      <h3 v-rainbow>{{ post.title }}</h3>
+      <article>{{ post.body }}</article>
+    </div>
   </section>
 </template>
 
 <script>
+import axios from 'axios'
 import PostCover from './PostCover'
 import AddPost from './AddPost'
 export default {
   name: 'PostSection',
   data () {
     return {
+      posts: []
     }
   },
-  components: { PostCover, AddPost }
+  components: { PostCover, AddPost },
+  methods: {
+    showPosts: function () {
+      let vm = this
+      axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(function (data) {
+          vm.posts = data.data.slice(0, 10)
+        })
+    }
+  },
+  created () {
+    this.showPosts()
+  }
 }
 </script>
 
