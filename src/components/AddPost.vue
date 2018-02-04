@@ -1,8 +1,8 @@
 <template>
   <div class="add-post">
     <div class="post-body">
-      <h1>Add a new Blog Post</h1>
-      <form action="#">
+      <h1>Добавить новый пост</h1>
+      <form v-if="!submitted" action="#">
         <label for="">Blog Title: </label>
         <input type="text"  v-model.lazy="blog.title" title="title-input" required>
         <label for="">Blog Content: </label>
@@ -23,6 +23,9 @@
         </select>
         <button @click.prevent="addPost" >Add Post</button>
       </form>
+      <div class="submitted" v-if="submitted">
+        <h3>Пост был успешно добавлен</h3>
+      </div>
       <!--preview-->
       <div id="preview">
         <h2>Preview Post</h2>
@@ -51,17 +54,20 @@ export default {
         categories: [],
         author: ''
       },
-      authors: ['Katyusha Nakon', 'Nakon Nails', 'Administrator']
+      authors: ['Katyusha Nakon', 'Nakon Nails', 'Administrator'],
+      submitted: false
     }
   },
   methods: {
     addPost: function () {
+      let vm = this
       axios.post('https://jsonplaceholder.typicode.com/posts', {
         title: this.blog.title,
         body: this.blog.content,
         userId: 1
       }).then(function (data) {
         console.log(data)
+        vm.submitted = true
       })
     }
   }
@@ -117,7 +123,7 @@ export default {
   #preview{
     width: 100%;
     padding: 10px 20px;
-    border: 2px solid $color-graphite;
+    border: 2px dotted $color-graphite;
     margin: 30px 0;
     p{
       width: 300px;
@@ -134,5 +140,13 @@ export default {
   }
   #checkbox label{
     display: inline-block;
+  }
+  .submitted{
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 25px;
+    width: 300px;
+    height: 95px;
+    border: 2px dotted $color-graphite;
   }
 </style>
