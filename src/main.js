@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+// Filters
+Vue.filter('shortened', function (value) {
+  return value.slice(0, 100) + '...'
+})
 
 // Custom directives
 Vue.directive('rainbow', {

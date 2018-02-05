@@ -15,7 +15,7 @@
       <!-- eslint-disable-next-line -->
       <div v-for="post in filteredPosts">
         <h3>{{ post.title }}</h3>
-        <article>{{ post.body }}</article>
+        <article>{{ post.body | shortened }}</article>
       </div>
     </div>
   </section>
