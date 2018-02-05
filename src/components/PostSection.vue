@@ -1,17 +1,22 @@
 <template>
   <section class="post-section">
-    <PostCover>PostCover</PostCover>
-    <!--<div>{{posts}}</div>-->
-    <!--<PostCover>PostCover</PostCover>-->
-    <!--<PostCover>PostCover</PostCover>-->
-    <!--<PostCover>PostCover</PostCover>-->
-    <!--<PostCover>PostCover</PostCover>-->
-    <!--<PostCover>PostCover</PostCover>-->
-    <h1>All posts</h1>
-    <!-- eslint-disable-next-line -->
-    <div v-for="post in posts">
-      <h3>{{ post.title }}</h3>
-      <article>{{ post.body }}</article>
+    <div class="row">
+      <PostCover>PostCover</PostCover>
+      <!--<div>{{posts}}</div>-->
+      <!--<PostCover>PostCover</PostCover>-->
+      <!--<PostCover>PostCover</PostCover>-->
+      <!--<PostCover>PostCover</PostCover>-->
+      <!--<PostCover>PostCover</PostCover>-->
+      <!--<PostCover>PostCover</PostCover>-->
+      <h1>All posts</h1>
+      <div class="search-box">
+        <input type="text" title="search" v-model="search" placeholder="Найти статью...">
+      </div>
+      <!-- eslint-disable-next-line -->
+      <div v-for="post in filteredPosts">
+        <h3>{{ post.title }}</h3>
+        <article>{{ post.body }}</article>
+      </div>
     </div>
   </section>
 </template>
@@ -24,10 +29,14 @@ export default {
   name: 'PostSection',
   data () {
     return {
-      posts: []
+      posts: [],
+      search: ''
     }
   },
   components: { PostCover, AddPost },
+  created () {
+    this.showPosts()
+  },
   methods: {
     showPosts: function () {
       let vm = this
@@ -37,8 +46,13 @@ export default {
         })
     }
   },
-  created () {
-    this.showPosts()
+  computed: {
+    filteredPosts: function () {
+      let vm = this
+      return vm.posts.filter((post) => {
+        return post.title.match(this.search.toLowerCase())
+      })
+    }
   }
 }
 </script>
@@ -52,5 +66,8 @@ export default {
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 10px;
+  }
+  .search-box{
+    align-self: last-baseline;
   }
 </style>
