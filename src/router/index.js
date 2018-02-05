@@ -32,13 +32,14 @@ export default new Router({
       name: 'AboutSection',
       component: AboutSection
     },
-    {path: '/post',
-      name: 'PostInner',
-      component: PostInner
-    },
     {path: '/add_post',
       name: 'AddPost',
       component: AddPost
+    },
+    {path: '/blog/post_1',
+      name: 'PostInner',
+      component: PostInner
     }
   ]
+  // mode: 'history'
 })
