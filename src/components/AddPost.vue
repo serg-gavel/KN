@@ -4,21 +4,21 @@
       <h1 v-if="!submitted">Добавить новый пост</h1>
       <form v-if="!submitted" action="#">
         <label for="">Blog Title: </label>
-        <input type="text"  v-model.lazy="blog.title" title="title-input" required>
+        <input type="text"  v-model.lazy="post.title" title="title-input" required>
         <label for="">Blog Content: </label>
-        <textarea name="" id="" cols="30" rows="10" v-model.lazy="blog.content"></textarea>
+        <textarea name="" id="" cols="30" rows="10" v-model.lazy="post.content"></textarea>
         <div id="checkbox">
           <label for="">Маникюр</label>
-          <input type="checkbox" value="маникюр" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="маникюр" v-model="post.categories" title="categories-input">
           <label for="">Лаки</label>
-          <input type="checkbox" value="лаки" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="лаки" v-model="post.categories" title="categories-input">
           <label for="">Дизайн</label>
-          <input type="checkbox" value="дизайн" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="дизайн" v-model="post.categories" title="categories-input">
           <label for="">Советы</label>
-          <input type="checkbox" value="советы" v-model="blog.categories" title="categories-input">
+          <input type="checkbox" value="советы" v-model="post.categories" title="categories-input">
         </div>
         <label for="">Author:</label>
-        <select v-model="blog.author" title="select-author" id="select-author">
+        <select v-model="post.author" title="select-author" id="select-author">
           <option v-for="author in authors" :key="author">{{ author }}</option>
         </select>
         <button @click.prevent="addPost" >Add Post</button>
@@ -29,14 +29,14 @@
       <!--preview-->
       <div id="preview">
         <h2>Preview Post</h2>
-        <p><span>Blog Title:</span> {{ blog.title }}</p>
+        <p><span>Blog Title:</span> {{ post.title }}</p>
         <p><span>Blog Content:</span></p>
-        <p>{{ blog.content }}</p>
+        <p>{{ post.content }}</p>
         <p><span>Blog Categories:</span></p>
         <ul>
-          <li v-for="category in blog.categories" :key="category.id">{{ category }}</li>
+          <li v-for="category in post.categories" :key="category.id">{{ category }}</li>
         </ul>
-        <p><span>Author:</span> {{ blog.author }}</p>
+        <p><span>Author:</span> {{ post.author }}</p>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
   name: 'AddPost',
   data () {
     return {
-      blog: {
+      post: {
         title: '',
         content: '',
         categories: [],
@@ -62,8 +62,8 @@ export default {
     addPost: function () {
       let vm = this
       axios.post('https://jsonplaceholder.typicode.com/posts', {
-        title: this.blog.title,
-        body: this.blog.content,
+        title: this.post.title,
+        body: this.post.content,
         userId: 1
       }).then(function (data) {
         console.log(data)

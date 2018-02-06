@@ -61,6 +61,8 @@ export default {
   name: 'PostInner',
   data () {
     return {
+      id: null,
+      post: {},
       postDate: '12.02.18',
       postViews: 999
     }
