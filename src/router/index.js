@@ -36,7 +36,7 @@ export default new Router({
       name: 'AddPost',
       component: AddPost
     },
-    {path: '/blog/post_1',
+    {path: '/blog/:id',
       name: 'PostInner',
       component: PostInner
     }
