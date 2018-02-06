@@ -1,21 +1,30 @@
 <template>
   <section class="post-section">
+    <h1>All posts</h1>
+    <div class="search-box">
+      <input type="text" title="search" v-model="search" placeholder="Найти статью...">
+    </div>
     <div class="row">
-      <PostCover>PostCover</PostCover>
-      <!--<div>{{posts}}</div>-->
-      <!--<PostCover>PostCover</PostCover>-->
-      <!--<PostCover>PostCover</PostCover>-->
-      <!--<PostCover>PostCover</PostCover>-->
-      <!--<PostCover>PostCover</PostCover>-->
-      <!--<PostCover>PostCover</PostCover>-->
-      <h1>All posts</h1>
-      <div class="search-box">
-        <input type="text" title="search" v-model="search" placeholder="Найти статью...">
-      </div>
       <!-- eslint-disable-next-line -->
-      <div v-for="post in filteredPosts">
-        <h3>{{ post.title }}</h3>
-        <article>{{ post.body | shortened }}</article>
+      <div class="post-cover" v-for="post in filteredPosts">
+        <div class="post-header">
+          <h4 class="post-heading">{{ post.title }}</h4>
+          <p class="post-date">21.02.18</p>
+        </div>
+        <div class="post-body">
+          <div class="post-image">
+            <img src="../assets/img/sunflower.jpg" alt="#">
+          </div>
+          <!--<article>{{ post.body | shortened }}</article>-->
+          <div class="read-more">
+            <router-link to="/blog/post_1" tag="button" class="post-btn">Читать далее...</router-link>
+          </div>
+        </div>
+        <div class="post-footer">
+          <div class="views-count">
+            <p class="views">150 просмотров</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -23,7 +32,7 @@
 
 <script>
 import axios from 'axios'
-import PostCover from './PostCover'
+// import PostCover from './PostCover'
 import AddPost from './AddPost'
 export default {
   name: 'PostSection',
@@ -33,7 +42,7 @@ export default {
       search: ''
     }
   },
-  components: { PostCover, AddPost },
+  components: { AddPost },
   created () {
     this.showPosts()
   },
@@ -59,15 +68,95 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/main";
-  .post-section{
-    order: 2;
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 10px;
+.post-section{
+  order: 2;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.search-box{
+  align-self: last-baseline;
+}
+.post-cover{
+  margin: 0 0 10px 10px;
+  width: 320px;
+  height: 470px;
+  @include shadow;
+  &:hover{
+    @include shadow_deep;
   }
-  .search-box{
-    align-self: last-baseline;
+}
+//post header
+.post-header{
+  height: 90px;
+  width: 320px;
+  background: $color-graphite;
+  color: $color-white;
+  h4.post-heading{
+    padding: 25px 10px 0 10px;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    text-align: center;
   }
+  p.post-date{
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+//post body
+.post-body{
+  width: 320px;
+  height: 350px;
+  .post-image{
+    height: 350px;
+    width: 320px;
+    overflow: hidden;
+    img{
+      height: auto;
+      width: 130%;
+      overflow: hidden;
+    }
+  }
+  .read-more{
+    height: 0;
+    position: relative;
+    padding-right: 100px;
+    button.post-btn {
+      bottom: 30px;
+      position: absolute;
+      background: rgba(58, 58, 58, 0.35);
+      color: $button-color-white;
+      border: 2px solid $button-color-white;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      padding: 10px 25px;
+      letter-spacing: 0.05rem;
+      &:hover{
+        background: $button-color-hover;
+        color: #fff;
+        border: 2px solid $button-color-hover;
+        transition: all .3s linear;
+        @include shadow;
+      }
+      &:focus {outline: none}
+    }
+  }
+}
+.post-footer{
+  height: 30px;
+  width: 320px;
+  background: $color-graphite;
+  .views-count{
+    p.views{
+      color: #fff;
+      margin: 0;
+      text-align: right;
+      padding: 5px 10px 0 0;
+    }
+  }
+}
 </style>

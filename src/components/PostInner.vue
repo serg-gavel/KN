@@ -1,48 +1,15 @@
 <template>
   <div class="post-inner">
     <header class="post-header">
-      <h1 class="post-heading">Подсолнухи – спутники солнца, подобны глазам твоим светлым</h1>
+      <h1 class="post-heading">{{ post.title }}</h1>
       <p class="post-date">{{ postDate }}</p>
     </header>
     <main class="post-body">
       <figure class="post-image">
-        <img src="../assets/img/sunflower.jpg" alt="#">
+        <img :src="postImg" alt="#">
       </figure>
       <article class="post-text">
-        <p class="inner-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam
-          aspernatur aut debitis dolores eveniet exercitationem facilis labore
-          laborum laudantium, maxime natus odio odit officia possimus, praesentium
-          quae quaerat quasi reiciendis sequi temporibus, voluptatem voluptatum?
-          Animi consequatur dignissimos dolore doloribus eveniet nobis praesentium
-          quidem voluptatum! Adipisci enim modi nesciunt rem reprehenderit similique
-          ut veritatis? Consequuntur cum, incidunt ipsum provident quae ut voluptates.
-          Animi beatae consequatur corporis eligendi ipsum iure molestiae similique
-          sint veritatis. Aliquam at blanditiis deleniti fugiat fugit, itaque mollitia
-          natus, nemo nihil pariatur quasi quos ratione reprehenderit ullam voluptatum?
-          Asperiores debitis dignissimos dolorum earum eos esse expedita facere,
-          harum hic id labore magnam maiores molestiae nesciunt nobis non odit
-          perspiciatis, possimus quisquam rem repellat tempora temporibus unde
-          vel velit vitae voluptas. Ab aperiam, autem beatae commodi deleniti
-          dolor doloremque eaque eligendi in ipsa ipsam labore laudantium liber
-          o minus nulla officia praesentium quae quaerat quo reiciendis rem repellat
-          sequi tenetur ullam ut, vel, voluptatibus? Aliquid architecto consectetur
-          cum cupiditate, dolor eligendi ipsa laborum maxime nulla possimus quia quis,
-          saepe sapiente sed sunt suscipit tempora tempore vitae! Accusantium autem
-          delectus explicabo facilis id illo illum ipsam nesciunt nostrum perspiciatis
-          sit veniam, vitae voluptatibus. Accusantium alias, atque blanditiis consectetur
-          ea eius eligendi maiores mollitia nihil nobis numquam omnis perspiciatis porro
-          qui quisquam repellat sit sunt temporibus ut voluptate! Distinctio in ipsum
-          laboriosam maiores mollitia quas qui reiciendis voluptatem? Aliquam aliquid,
-          autem consequatur consequuntur cum debitis delectus deserunt dignissimos
-          distinctio dolorem doloremque doloribus et facilis fugiat harum inventore
-          ipsum laboriosam magnam molestias nostrum quae quam quas qui quis quos rem
-          repellat similique sunt tenetur veniam! Animi earum eligendi illum laborum
-          obcaecati quos reiciendis reprehenderit! Ab, animi, architecto at blanditiis
-          deserunt dicta ea eaque explicabo id ipsa modi nam natus nobis optio pariatur,
-          perspiciatis rem repellat repellendus saepe sunt ullam unde voluptate volupt
-          atibus?
-        </p>
+        <p class="inner-text">{{ post.body }}</p>
           <router-link to="/blog" tag="button" class="post-btn">Вернуться назад</router-link>
         <ShareBox>ShareBox</ShareBox>
       </article>
@@ -56,18 +23,28 @@
 </template>
 
 <script>
+import axios from 'axios'
 import ShareBox from './ShareBox'
 export default {
   name: 'PostInner',
   data () {
     return {
-      id: null,
+      id: this.$route.params.id,
       post: {},
+      postImg: require('../assets/img/sunflower.jpg'),
       postDate: '12.02.18',
       postViews: 999
     }
   },
-  components: { ShareBox }
+  components: { ShareBox },
+  created () {
+    let vm = this
+    axios.get('https://jsonplaceholder.typicode.com/posts/' + vm.id)
+      .then(function (data) {
+        console.log(data)
+        vm.post = data.data
+      })
+  }
 }
 </script>
 
