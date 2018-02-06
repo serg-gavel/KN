@@ -17,7 +17,7 @@
           </div>
           <!--<article>{{ post.body | shortened }}</article>-->
           <div class="read-more">
-            <router-link to="/blog/post_1" tag="button" class="post-btn">Читать далее...</router-link>
+            <router-link :to="'/blog/' + post.id" tag="button" class="post-btn">Читать далее...</router-link>
           </div>
         </div>
         <div class="post-footer">
