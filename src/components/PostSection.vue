@@ -80,6 +80,7 @@ export default {
   align-self: last-baseline;
 }
 .post-cover{
+  float: left;
   margin: 0 0 10px 10px;
   width: 320px;
   height: 470px;
