@@ -61,15 +61,12 @@ export default {
   methods: {
     addPost: function () {
       let vm = this
-      axios.post('https://jsonplaceholder.typicode.com/posts', {
-        title: this.post.title,
-        body: this.post.content,
-        userId: 1
-      }).then(function (data) {
+      axios.post('', vm.post).then(function (data) {
         console.log(data)
         vm.submitted = true
       })
-    }
+    },
+    signIn: function () {}
   }
 }
 </script>
