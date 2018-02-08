@@ -1,7 +1,7 @@
 # KN
 [![GitHub issues](https://img.shields.io/github/issues/serg-gavel/KN.svg?style=flat-square)](https://github.com/serg-gavel/KN/issues)
 
-> A Vue.js project
+> Done with updates here, switch to private use
 
 ## Build Setup
 
