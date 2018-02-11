@@ -3,6 +3,12 @@
 
 > Done with updates here, switch to private use
 
+> To-do
+1. back to top
+2. social
+3. auth 
+
+
 ## Build Setup
 
 ``` bash
