@@ -7,6 +7,7 @@ import CooperationSection from '@/components/CooperationSection'
 import AboutSection from '@/components/AboutSection'
 import PostInner from '@/components/PostInner'
 import AddPost from '@/components/AddPost'
+import BlogSectionTwo from '@/components/BlogSectionTwo'
 
 Vue.use(Router)
 
@@ -39,6 +40,10 @@ export default new Router({
     {path: '/blog/:id',
       name: 'PostInner',
       component: PostInner
+    },
+    {path: '/blog',
+      name: 'BlogSectionTwo',
+      component: BlogSectionTwo
     }
   ]
   // mode: 'history'
